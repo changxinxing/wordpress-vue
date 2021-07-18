@@ -1,0 +1,206 @@
+:root {
+  --brown: #2d2926;
+  --light-brown: #c5b072;
+}
+#questionaire * {
+  font-family: "Poppins", sans-serif;
+}
+#questionaire button {
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  background: var(--brown);
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+}
+#questionaire button svg {
+  height: 24px;
+  width: 24px;
+}
+#questionaire button.inverse {
+  border: none;
+  background: transparent;
+  color: var(--brown);
+}
+#questionaire .heading-container {
+  position: relative;
+  padding: 12px 22px 18px;
+  margin: 10px;
+  text-align: left;
+}
+#questionaire .heading-container .title {
+  font-family: "Freight", serif;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+#questionaire .heading-container .description {
+  margin: 0;
+}
+#questionaire .heading-container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  border: 2px solid var(--light-brown);
+  border-right-color: transparent;
+}
+#questionaire .page-nav {
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-around;
+}
+#questionaire .block-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#questionaire .block-grid .item {
+  background: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  position: relative;
+  margin: 20px;
+  padding: 10px 20px;
+  text-align: left;
+}
+#questionaire .box-list .item {
+  background: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  position: relative;
+  margin: 20px auto;
+  padding: 10px 20px;
+  text-align: left;
+}
+#questionaire .box-list .item input[type=checkbox],
+#questionaire .box-list .item input[type=radio] {
+  display: none;
+}
+#questionaire .box-list .item label {
+  cursor: pointer;
+}
+#questionaire .box-list .item .icon-check {
+  display: none;
+}
+#questionaire .box-list .item .title {
+  margin: 0;
+  font-size: 18px;
+}
+#questionaire .box-list .item .description {
+  margin: 0;
+}
+#questionaire .box-list .item::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  border: 2px solid var(--light-brown);
+}
+#questionaire .box-list .item.selected {
+  border: 2px solid var(--light-brown);
+  background: #f6f0e6;
+}
+#questionaire .box-list .item.selected::after {
+  display: none;
+}
+#questionaire .box-list .item.selected .icon-check {
+  display: initial;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#questionaire .image-grid .item {
+  position: relative;
+  cursor: pointer;
+}
+#questionaire .image-grid .item label {
+  cursor: pointer;
+}
+#questionaire .image-grid .item img {
+  border: 2px solid transparent;
+  width: 100%;
+}
+#questionaire .image-grid .item input[type=checkbox],
+#questionaire .image-grid .item input[type=radio] {
+  display: none;
+}
+#questionaire .image-grid .item .title {
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  text-align: left;
+  font-size: 18px;
+}
+#questionaire .image-grid .item .icon-check {
+  display: none;
+}
+#questionaire .image-grid .item:hover img {
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
+#questionaire .image-grid .item.selected img {
+  border-color: var(--light-brown);
+}
+#questionaire .image-grid .item.selected .icon-check {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #fff;
+  border-radius: 50%;
+}
+#questionaire .form-group label {
+  text-align: left;
+  display: block;
+}
+#questionaire .form-group input:not([type=checkbox]) {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid #efefef;
+  border-radius: 0;
+  padding: 10px;
+}
+#questionaire .form-group textarea {
+  border: 2px solid var(--light-brown);
+  display: block;
+  width: 100%;
+}
+@media (min-width: 940px) {
+  #questionaire .page-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  #questionaire .page-content .left {
+    flex: 0 0 32%;
+  }
+  #questionaire .page-content .right {
+    flex: 0 0 58%;
+  }
+  #questionaire .image-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#questionaire .slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+#questionaire .slide-fade-leave-active {
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+#questionaire .slide-fade-enter-from,
+#questionaire .slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}

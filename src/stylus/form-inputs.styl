@@ -1,0 +1,43 @@
+.label-shift {
+	position: relative;
+	height: 52px;
+	margin-bottom: 10px;
+}
+
+.label-shift label {
+	top: 15px;
+	left: 20px;
+	position: absolute;
+	z-index: 99;
+	font-weight: 500;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #2D2926;
+	pointer-events: none;
+	transition: 0.2s ease all;
+}
+
+.label-shift input:focus {
+	outline: none;
+	border:2px solid #dfcdb2;
+}
+
+.label-shift input:focus ~ label,
+// .label-shift input:valid ~ label,
+.label-shift input:not(:placeholder-shown) ~ label {
+	top: -8px;
+	background:white;
+	height: 10px;
+	left: 20px;
+	font-size: 11px;
+	padding:0 3px;
+	opacity: 1;
+}
+
+input[value="test"] ~ label {
+	background: red !important;
+}
+
+::placeholder {
+  color: transparent !important;
+}

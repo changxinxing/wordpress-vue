@@ -1,0 +1,20 @@
+{
+  "name": "spaciel",
+  "version": "1.0.0",
+  "description": "spaciel",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "node node_modules/parcel-bundler/bin/cli.js build ./src/main.js --no-cache --no-source-maps",
+    "dev": "node node_modules/parcel-bundler/bin/cli.js build ./src/main.js --no-cache --no-source-maps --no-hmr",
+    "watch": "node node_modules/parcel-bundler/bin/cli.js watch ./src/main.js --no-cache --no-source-maps --no-hmr"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.1",
+    "axios": "^0.21.1",
+    "parcel-bundler": "^1.12.5",
+    "stylus": "^0.54.8",
+    "v-mask": "^2.2.4",
+    "vue": "^2.6.14",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
